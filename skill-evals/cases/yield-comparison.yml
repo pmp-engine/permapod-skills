@@ -1,0 +1,17 @@
+name: yield_comparison
+description: User wants to compare yields across markets
+queries:
+  - "Compare yields across all Perma Pod markets"
+  - "Which asset has the best supply APY?"
+  - "What are the incentive emissions?"
+  - "Where should I deposit for the best yield?"
+expected:
+  command: yields
+  flags: []
+  must_include_in_output:
+    - "Supply APY"
+    - "Borrow APY"
+    - "Emissions"
+  must_not_call:
+    - market
+    - wallet

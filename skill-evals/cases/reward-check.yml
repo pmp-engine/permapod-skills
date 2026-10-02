@@ -1,0 +1,19 @@
+name: reward_check
+description: User asks about unclaimed rewards
+queries:
+  - "What rewards can zig1jy2amze7fxcmessewv65jq5kupsxae2n96yech claim?"
+  - "Check unclaimed rewards for my wallet"
+  - "Do I have any incentive rewards?"
+  - "Show my Perma Pod rewards"
+expected:
+  command: rewards
+  args: ["<address>"]
+  requires_address: true
+  address_validation: must start with zig1
+  must_include_in_output:
+    - "Reward Token"
+    - "Amount"
+    - "Value"
+  must_not_call:
+    - wallet
+    - dashboard

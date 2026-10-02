@@ -1,0 +1,23 @@
+{
+  "name": "permapod-skills",
+  "version": "1.0.0",
+  "description": "Query the Perma Pod lending/borrowing protocol on Zigchain — TVL, market rates, wallet health, yields, rewards, and more.",
+  "author": "permapod",
+  "license": "MIT",
+  "homepage": "https://github.com/permapod/skills",
+  "skill_file": "../SKILL.md",
+  "requires": {
+    "node": ">=18.0.0",
+    "network": "https://public-zigchain-rpc.numia.xyz"
+  },
+  "install": {
+    "steps": [
+      "yarn install",
+      "yarn build"
+    ],
+    "verify": "node build/index.js --version"
+  },
+  "hooks": {
+    "session-start": ".claude-plugin/hooks/session-start.sh"
+  }
+}

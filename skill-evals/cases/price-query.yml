@@ -1,0 +1,21 @@
+name: price_query
+description: User asks about asset prices
+queries:
+  - "What's the price of ZIG?"
+  - "How much is stZIG worth?"
+  - "Show me all oracle prices"
+  - "USDC price on Zigchain"
+expected:
+  # Single asset → price <denom>, all assets → prices
+  command_options:
+    single: price
+    all: prices
+  denom_resolution:
+    ZIG: uzig
+    stZIG: "coin.zig109f7g2rzl2aqee7z6gffn8kfe9cpqx0mjkk7ethmx8m2hq4xpe9snmaam2.stzig"
+  must_include_in_output:
+    - "Price"
+    - "$"
+  must_not_call:
+    - wallet
+    - dashboard

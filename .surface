@@ -1,0 +1,36 @@
+# Perma Pod CLI Surface
+# Auto-generated command inventory. Update when commands/flags change.
+# Run `make drift-check` to verify SKILL.md stays in sync.
+
+# Global flags
+--help, -h
+--version, -v
+--testnet, -t
+--json, -j
+
+# Protocol-level commands
+dashboard [--testnet] [--json]
+markets [--testnet] [--json]
+market <denom> [--testnet] [--json]
+prices [--testnet] [--json]
+price <denom> [--testnet] [--json]
+supply [--testnet] [--json]
+yields [--testnet] [--json]
+vaults [--testnet] [--json]
+
+# Wallet-level commands
+wallet <address> [--testnet] [--json]
+accounts <address> [--testnet] [--json]
+account <id> [--testnet] [--json]
+rewards <address> [--testnet] [--json]
+
+# Denom shortcuts
+ZIG -> uzig
+stZIG -> coin.zig109f7g2rzl2aqee7z6gffn8kfe9cpqx0mjkk7ethmx8m2hq4xpe9snmaam2.stzig
+USDC -> ibc/6490A7EAB61059BFC1CDDEB05917DD70BDF3A611654162A1A47DB930D40D8AF4
+
+# Environment variables
+PERMAPOD_RPC_URL
+PERMAPOD_TESTNET_RPC_URL
+PERMAPOD_TIMEOUT_MS
+PERMAPOD_MAX_RETRIES

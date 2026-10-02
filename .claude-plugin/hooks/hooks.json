@@ -1,0 +1,11 @@
+{
+  "hooks": [
+    {
+      "event": "session-start",
+      "command": ".claude-plugin/hooks/session-start.sh",
+      "description": "Validate Node.js version, build status, and RPC reachability",
+      "timeout_ms": 10000,
+      "required": false
+    }
+  ]
+}

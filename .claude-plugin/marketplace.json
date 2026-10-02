@@ -1,0 +1,28 @@
+{
+  "listing": {
+    "name": "Perma Pod Query",
+    "tagline": "Query Zigchain DeFi protocol data in seconds",
+    "category": "defi",
+    "tags": [
+      "zigchain",
+      "defi",
+      "lending",
+      "borrowing",
+      "cosmos",
+      "cosmwasm"
+    ],
+    "icon": "chart-bar",
+    "screenshots": [],
+    "highlights": [
+      "Protocol dashboard with TVL, rates, and utilization",
+      "Deep market analysis for ZIG, stZIG, and USDC",
+      "Wallet health monitoring with liquidation risk alerts",
+      "Yield comparison and incentive emission tracking",
+      "JSON output mode for programmatic access"
+    ]
+  },
+  "compatibility": {
+    "min_claude_code_version": "1.0.0",
+    "platforms": ["macos", "linux", "windows"]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "permapod-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to query Perma Pod lending/borrowing protocol on Zigchain",
+  "main": "build/index.js",
+  "bin": {
+    "permapod": "./build/index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "lint": "eslint 'src/**/*.ts'",
+    "format": "prettier --check 'src/**/*.ts'",
+    "format:fix": "prettier --write 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "@cosmjs/cosmwasm-stargate": "0.32.4",
+    "@cosmjs/stargate": "0.32.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.11.5",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.2.5",
+    "ts-jest": "^29.1.2",
+    "ts-node": "10.9.2",
+    "typescript": "5.3.3"
+  }
+}

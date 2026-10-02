@@ -1,0 +1,16 @@
+name: testnet_query
+description: User explicitly asks for testnet data
+queries:
+  - "Check testnet markets"
+  - "What's the TVL on testnet?"
+  - "Show me Perma Pod testnet dashboard"
+  - "ZIG price on testnet"
+expected:
+  flags: ["--testnet"]
+  command_options:
+    markets: markets
+    dashboard: dashboard
+    price: price
+  invariant: "--testnet flag MUST be included when user says testnet"
+  must_not_do:
+    - "Query mainnet when user said testnet"

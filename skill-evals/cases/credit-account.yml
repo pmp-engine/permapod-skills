@@ -1,0 +1,18 @@
+name: credit_account
+description: User asks about Credit Manager account positions
+queries:
+  - "Show my Credit Manager positions for zig1jy2amze7fxcmessewv65jq5kupsxae2n96yech"
+  - "What credit accounts does zig1jy2amze7fxcmessewv65jq5kupsxae2n96yech have?"
+  - "Show account 42 positions"
+expected:
+  # Two-step flow: accounts <address> → account <id>
+  sequence:
+    - command: accounts
+      args: ["<address>"]
+      requires_address: true
+    - command: account
+      args: ["<id>"]
+      note: "ID comes from the accounts command output"
+  must_not_call:
+    - wallet
+    - rewards

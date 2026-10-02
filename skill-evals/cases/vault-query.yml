@@ -1,0 +1,17 @@
+name: vault_query
+description: User asks about vaults
+queries:
+  - "Show vault configurations"
+  - "What's the vault utilization?"
+  - "Are there any active vaults on Perma Pod?"
+  - "Vault deposit caps"
+expected:
+  command: vaults
+  flags: []
+  must_include_in_output:
+    - "Vault"
+    - "Deposit Cap"
+    - "Max LTV"
+  must_not_call:
+    - wallet
+    - markets

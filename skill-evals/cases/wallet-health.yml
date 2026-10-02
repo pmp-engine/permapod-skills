@@ -1,0 +1,19 @@
+name: wallet_health
+description: User asks about wallet health, deposits, or debts
+queries:
+  - "Is my wallet zig1jy2amze7fxcmessewv65jq5kupsxae2n96yech healthy?"
+  - "Check the health of zig1jy2amze7fxcmessewv65jq5kupsxae2n96yech"
+  - "What are my deposits and debts?"
+  - "Am I at risk of liquidation?"
+expected:
+  command: wallet
+  args: ["<address>"]
+  requires_address: true
+  address_validation: must start with zig1
+  must_include_in_output:
+    - "Health"
+    - "Deposits"
+  must_not_call:
+    - dashboard
+    - markets
+    - accounts

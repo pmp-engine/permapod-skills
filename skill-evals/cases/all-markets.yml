@@ -1,0 +1,17 @@
+name: all_markets
+description: User wants to see all markets at once
+queries:
+  - "Show me all Perma Pod markets"
+  - "List all lending markets on Zigchain"
+  - "What markets are available?"
+  - "All assets with their rates"
+expected:
+  command: markets
+  flags: []
+  must_include_in_output:
+    - "Supply APY"
+    - "Borrow APY"
+    - "Max LTV"
+  must_not_call:
+    - market
+    - dashboard
